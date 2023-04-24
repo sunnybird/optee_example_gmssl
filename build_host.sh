@@ -2,8 +2,7 @@ BUILD_DIR=build-out-host
 rm -rf $BUILD_DIR
 mkdir -p $BUILD_DIR
 
-AARCH64_GCC_PATH=/data2/workspace/optee/toolchains/aarch64/bin
-PATH=$AARCH64_GCC_PATH:${PATH}
+source gcc.sh
 
 cmake \
     -DCMAKE_TOOLCHAIN_FILE=./gcc.toolchain.cmake \
