@@ -142,8 +142,8 @@ all: $(libname).a
 cleanfiles += $(libname).a
 
 $(libname).a: $(objs)
-	@echo '  AR      $@'
-	$(q)rm -f $@ && $(AR$(sm)) rcs $@ $^
+	@echo '  AR      $(out-dir)/$@'
+	$(q)rm -f $(out-dir)/$@ && $(AR$(sm)) rcs $(out-dir)/$@ $^
 endif
 
 ifneq (,$(shlibname))
